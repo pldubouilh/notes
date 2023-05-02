@@ -1,0 +1,38 @@
+<title>Notes</title>
+<meta name="viewport" content="width=device-width" initial-scale=1></meta>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css"></link>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#EFEFEF">
+<overlay>
+    <div>
+        <openfile><p>open</p></openfile>
+        <newfile><p>new</p></newfile>
+        <input type="password" id="pass" placeholder="🔑 password"></input>
+    </div>
+</overlay>
+<topbar>
+    <toggle>
+        <svg viewBox="0 0 100 80" width="10" height="10" fill="grey">
+            <rect y="0"  width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+        </svg>
+    </toggle>
+    <night>🌚</night>
+    <add>
+        <svg viewBox="0 0 100 100" width="10" height="10" fill="grey">
+            <rect x="0" y="40" width="100" height="20"></rect>
+            <rect x="40" y="0" width="20" height="100"></rect>
+        </svg>
+
+    </add>
+</topbar>
+<sidebar style="display: block;"">
+    <list></list>
+    <textarea id="search" placeholder="🔍 search"></textarea>
+</sidebar>
+<textarea id="main" autofocus placeholder="start typing"></textarea>
+<script src="interface.js"></script>
+

@@ -1,0 +1,192 @@
+:theme {
+    --font-color: #EFEFEF;
+    --highlight-font-color: white;
+    --background-color: #20222B;
+}
+
+body {
+    margin: 0;
+    padding: 25px 0 25px 25px;
+    max-width: 1024px;
+    margin: auto;
+    background-color: var(--background-color);
+}
+
+* {
+    font-family: mono;
+    font-size: 14px;
+    line-height: 2;
+    border: none;
+    outline: none;
+    color: grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+.ts {
+    margin: 0;
+    height: 5px;
+    font-size: 8px;
+    font-style: italic;
+    /* text-align: right; */
+    padding-right: 15px;
+}
+
+.listel {
+    margin: unset;
+}
+
+textarea {
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    resize: none;
+    color: var(--font-color)
+}
+
+#pass {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding-top: 10px;
+}
+
+.highlight {
+    color: var(--highlight-font-color);
+}
+
+#main {
+    padding: 25px;
+    float: left;
+    width: 80%;
+    height: 100%;
+}
+
+#search {
+    height: 30px;
+    overflow-y: hidden;
+    position: fixed;
+    bottom: 9px;
+}
+
+topbar {
+    position: fixed;
+    top: 15px;
+    width: 19%;
+    user-select: none;
+}
+
+night {
+    cursor: pointer;
+}
+
+toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+add {
+    cursor: pointer;
+    font-style: bold;
+}
+
+sidebar {
+    float: left;
+    width: 19%;
+    min-width: 100px;
+    height: 99%;
+    border-top: 2em solid rgba(0, 0, 0, 0);
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
+    user-select: none;
+    border-right: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+list {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
+    overflow-y: auto;
+}
+
+sidebar div {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+sidebar div span {
+    display: inline-block;
+    overflow-x: clip;
+    width: 85%;
+}
+
+sidebar div svg {
+    opacity: 0;
+    line-height: 30px;
+    vertical-align: middle;
+    transition: 0.3s;
+}
+
+sidebar div:hover svg {
+    opacity: 1;
+}
+
+overlay {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 99;
+}
+
+overlay div {
+    margin: auto;
+    width: 220px;
+    padding-top: 20%;
+    user-select: none;
+}
+
+overlay p {
+    color: white;
+    display: flex;
+    align-content: stretch;
+    height: -webkit-fill-available;
+    justify-content: center;
+    align-items: center;
+}
+
+overlay textarea {
+    padding-top: 10px;
+}
+
+openfile, newfile {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: #7f8c8d;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    * {
+        font-size: 16px;
+    }
+
+    sidebar {
+        display: none;
+        width: 100%;
+    }
+    sidebar div svg {
+        opacity: 1;
+    }
+    main {
+        float: none;
+        width: 100%;
+        height: calc(100% - 35px);
+    }
+}
